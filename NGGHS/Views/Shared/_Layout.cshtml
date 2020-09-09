@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - NGGHS</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+
+    <style>
+        .affix {
+            top: 0;
+            width: 100%;
+            z-index: 9999 !important;
+        }
+
+        .navbar {
+            margin-bottom: 0px;
+        }
+
+        .affix ~ .container-fluid {
+            position: relative;
+            top: 50px;
+        }
+    </style>
+
+
+        <div class="container-fluid" style=" background-color: #337ab7;color: #fff;">
+            <div class="row">
+                <div class="col-sm-1" style="height :100px;">
+                    <span>
+                        <img src="~/images/LOGO.jpg" class="img-circle" alt="Cinque Terre" width="100" height="78" style="padding-top:19px;">
+                    </span>
+                </div>
+                <div class="col-sm-8">
+                    <h1 style="font-size:45px;margin-left:75px;">Netrakona Govt Girls High School</h1>
+
+                </div>
+                <div class="col-sm-3" style="padding:0;">
+
+                </div>
+                <div class="clearfix visible-sm"></div>
+            </div>
+        </div>
+        <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197" style="border-radius: 0;">
+            <div class="container-fluid" style="background-color:#0F172D;">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primaryNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <span class="navbar-brand" style="width: 150px;">@ViewData["Title"]</span>
+                </div>
+                <div class="collapse navbar-collapse" id="primaryNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index" style="font-weight: bold;font-size: 17px;color: whitesmoke;">Home</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="About" style="font-weight: bold;font-size: 17px;color: whitesmoke;">About</a></li>
+
+                        <li><a asp-area="" asp-controller="Home" asp-action="Admission" style="font-weight: bold;font-size: 17px;color: whitesmoke;">Admission</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Administration" style="font-weight: bold;font-size: 17px;color: whitesmoke;">Administration</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-weight: bold;font-size: 17px;color: whitesmoke;">Academic <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a asp-area="" asp-controller="Home" asp-action="Arts">Arts</a></li>
+                                <li><a asp-area="" asp-controller="Home" asp-action="Commerce">Commerce</a></li>
+                                <li><a asp-area="" asp-controller="Home" asp-action="Science">Science</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-weight: bold;font-size: 17px;color: whitesmoke;">Result <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a asp-area="" asp-controller="Result" asp-action="SSC">SSC</a></li>
+                                <li><a asp-area="" asp-controller="Result" asp-action="JSC">JSC</a></li>
+                                <li><a asp-area="" asp-controller="Result" asp-action="Class_6">Class 6</a></li>
+                                <li><a asp-area="" asp-controller="Result" asp-action="Class_7">Class 7</a></li>
+                                <li><a asp-area="" asp-controller="Result" asp-action="Class_8">Class 8</a></li>
+                                <li><a asp-area="" asp-controller="Result" asp-action="Class_9">Class 9</a></li>
+                                <li><a asp-area="" asp-controller="Result" asp-action="Class_10">Class 10</a></li>
+                            </ul>
+                        </li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="FacultyList" style="font-weight: bold;font-size: 17px;color: whitesmoke;">Faculty List</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Facilities" style="font-weight: bold;font-size: 17px;color: whitesmoke;">Facilities</a></li>
+
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-weight: bold;font-size: 17px;color: whitesmoke;">Student <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a asp-area="" asp-controller="Home" asp-action="StudentInformation">Student Information</a></li>
+                                <li><a asp-area="" asp-controller="Home" asp-action="AllStudentInformation">All Student Information</a></li>
+                            </ul>
+                        </li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Contact" style="font-weight: bold;font-size: 17px;color: whitesmoke;">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="container-fluid bg-3 text-center" style="background-color: #337ab7;color: white;">
+                <br>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h3>Quick Links</h3>
+
+                        <p><a href="https://www.teachers.gov.bd/%22" style="color: white">শিক্ষক বাতায়ন</a></p>
+                        <p><a href="https://moedu.gov.bd/" style="color: white">Ministry of Education</a></p>
+                        <p><a href="https://www.dhakaeducationboard.gov.bd" style="color: white">Dhaka Education Board</a></p>
+                        <p><a href="http://www.nctb.gov.bd/" style="color: white">NCTB</a></p>
+
+                    </div>
+
+                    <div class="col-sm-4">
+                        <h3>Address</h3>
+                        <address>
+
+
+                            Netrakona Govt Girls High School,Dhaka<br />
+                            Netrakona Govt Girls High School - 1703 <br />Dhaka Bangladesh<br />
+
+                            Tel :+88-025588767<br />
+                            Mobile:01750578731<br />
+                            Fax :+88-02-9204061<br />
+                            Email :info@NGGHS.edu.bd<br />
+
+                        </address>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <h3>Social Links</h3>
+
+                        <p><a href="https://facebook.com/?lang=en" style="color: white">FaceBook</a></p>
+                        <p><a href="https://www.instagram.com/" style="color: white">Instagram</a></p>
+                        <p><a href="https://twitter.com/?lang=en" style="color: white">Twitter</a></p>
+                        <p><a href="https://www.linkedin.com/" style="color: white">Linkedin</a></p>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+
+        <div class="container" style="background-color: black; color: white;  width: 100%; padding-left: 20px;">
+            <hr />
+            <footer>
+                <p>&copy; 2018 - NGGHS</p>
+            </footer>
+        </div>
+
+        <environment include="Development">
+            <script src="~/lib/jquery/dist/jquery.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+            <script src="~/js/site.js" asp-append-version="true"></script>
+        </environment>
+        <environment exclude="Development">
+            <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                    asp-fallback-test="window.jQuery"
+                    crossorigin="anonymous"
+                    integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+            </script>
+            <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                    crossorigin="anonymous"
+                    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+            </script>
+            <script src="~/js/site.min.js" asp-append-version="true"></script>
+        </environment>
+
+        @RenderSection("Scripts", required: false)
+    </body>
+</html>
